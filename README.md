@@ -1,7 +1,7 @@
 # Fusion Functions
 
-This repository is a collection of reusable PHP code for WordPress projects, not a WordPress plugin. It starts with the supplied `Magic_Card` source. `Magic_Card.php` is preserved exactly as provided, version 1.8.
+This repository is a collection of reusable PHP code for WordPress projects, not a WordPress plugin. It starts with `Magic_Card`, version 1.9. The original version 1.8 remains in the first commit.
 
-The first area under review is rendered-card caching. See [CACHE_REVIEW.md](CACHE_REVIEW.md) for the current behaviour and proposed repair.
+Load `cards.php` in the host project; `Magic_Card.php` remains as a compatibility loader. Render with `Magic_Card::get_card( $card_slug, $source_post_id, $block_id, $page_id )`. The block and page arguments are optional for existing calls. See [CACHE_REVIEW.md](CACHE_REVIEW.md) for transient caching, save invalidation and integration requirements.
 
-Development should follow the applicable general standards in [codex-standards](https://github.com/cchatterton/codex-standards). Plugin packaging, update-controller, and plugin release rules do not apply to this repository. No runtime changes have been made to the supplied source yet.
+Development follows the applicable general and function standards in [codex-standards](https://github.com/cchatterton/codex-standards). Plugin packaging, update-controller, and plugin release rules do not apply to this repository.
